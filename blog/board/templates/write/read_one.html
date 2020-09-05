@@ -1,0 +1,20 @@
+{% extends 'layout/layout.html' %}
+{% block content %}
+<section class="container">
+    <div class="card">
+        <div class="card-body">
+            <h1>{{write.title}}</h1>
+            <h6>{{write.author.username}}</h6>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+
+            <p class="card-text">{{write.content}}</p>
+            {% if request.session.user == write.author.username %}
+            <a href="{% url 'write_update' write.pk %}" class="card-link">수정하기</a>
+            <a href="{% url 'write_delete' write.pk %}" class="card-link">삭제하기</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endblock %}

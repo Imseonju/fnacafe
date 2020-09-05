@@ -1,0 +1,14 @@
+.logo:hover {
+    color: teal;
+}
+
+
+.jumbotron , .jumbotron-fluid {
+    background-color: rgb(245, 213, 208);
+}
+
+.collapse, .navbar-collapse, .navbar-nav, .mr-auto {
+    background-color: rgb(251, 239, 237);
+}   
+
+

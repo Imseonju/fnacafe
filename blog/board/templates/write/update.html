@@ -1,0 +1,19 @@
+{% extends 'layout/layout.html' %}
+{% block content %}
+<section class="container">
+    
+<form action="{% url 'write_update' wri.pk %}" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="titleInput">Title</label>
+        <input type="text" class="form-control" id="titleInput" value="{{wri.title}}" name="title"> 
+        </div>
+    <div class="form-group">
+        <label for="contentInput">content</label>
+        <textarea class="form-control" id="contentInput" name='content' rows="5">{{wri.content}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</section>
+
+{% endblock %}

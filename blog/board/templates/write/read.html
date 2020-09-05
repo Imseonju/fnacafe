@@ -1,0 +1,42 @@
+{% extends 'layout/layout.html' %}
+{% block content %}
+<section class='container'>
+
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">NO.</th>
+                <th scope="col">Author</th>
+                <th scope="col">Title</th>
+                <th scope="col">Content</th>
+                <th scope="col">write_time</th>
+                <th scope="col">Modified_at</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for write in writes %}
+            {% if request.session.user %}
+
+            <tr>
+                <th scope="row">{{write.pk}}</th>
+                <td>{{write.author}}</td>
+                <td><a href="{% url 'write_read_one' write.pk %}" class="author">{{write.title}}</a></td>
+                <td>{{write.answer}}</td>
+                <td>{{write.write_time}}</td>
+                <td>{{write.moditied_at}}</td>
+                {% endif %}
+                {% if request.session.user == write.author.username %}
+                <td><a href="{% url 'write_update' write.pk %}" class="btn btn-outline-success my-2 my-sm-0">수정하기</a> 
+                    <a href="{% url 'write_delete' write.pk %}" class="btn btn-outline-success my-2 my-sm-0">삭제하기</a>
+                </td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="bar2" style="margin:6px ;">
+        <a href="{% url 'write_create'%}" class="btn btn-outline-secondary my-2 my-sm-0">Create</a>
+    </div>
+</section>
+{% endblock %}

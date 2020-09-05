@@ -1,0 +1,99 @@
+{% extends 'layout/layout.html' %}
+{% load static %}
+{% block content %}
+<section class="container">
+    <figure class="figure">
+        <img src="{% static 'image/tak2.jpeg' %}" class="figure-img img-fluid rounded" alt="...">
+        <figcaption class="figure-caption">이름: 박영탁 생년월일: 1983.05.13 출생: 경상북도 문경시 키: 178cm 혈액형: O형</figcaption>
+    </figure>
+    <nav id="navbar-example3" class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'intro' %}">목차</a>
+        <nav class="nav nav-pills flex-column">
+            <a class="nav-link" href="#item-1">영탁</a>
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link ml-3 my-1" href="#item-1-1">학력 </a>
+                <a class="nav-link ml-3 my-1" href="#item-1-2">경력</a>
+            </nav>
+            <a class="nav-link" href="#item-2">대표곡</a>
+            <a class="nav-link" href="#item-3">수상</a>
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link ml-3 my-1" href="#item-3-1">방송</a>
+                <a class="nav-link ml-3 my-1" href="#item-3-2">광고</a>
+            </nav>
+        </nav>
+    </nav>
+
+    <div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+        <h4 id="item-1">영탁</h4>
+        <p>박영탁(朴永卓[1], 1983년 5월 13일 ~ )은 대한민국의 트로트 가수이자 배우로, 내일은 미스터트롯 프로그램에서 선(2위)을 차지하였다. 특히 강진의 '막걸리 한잔'을 불러 화제가 되었다.
+            2020년 꼰대인턴으로 배우로도 데뷔를 했다. 싱어송라이터이며 프로듀싱을 해주기도 한다. 장민호에게 ‘읽씹안읽씹’ 곡을 주었고 이찬원에게는 아직 나오지는 않았지만 ‘찬찬히’, ’참 좋은
+            사람’[2] 두 곡을 주었으며 이대원에게는 ‘챔피언’ 곡을 주고, 정동원과 남승민에게 '짝짝꿍짝' 듀엣곡을 주었다.[3]</p>
+        <h5 id="item-1-1">학력</h5>
+        <p>영가초등학교<br>
+            안동중학교<br>
+            안동고등학교<br>
+            청주대학교 언론정보학부<br>
+            국민대학교 종합예술대학원<br></p>
+        <h5 id="item-1-2">경력</h5>
+        <p>안동MBC 어린이 합창단<br>
+            그룹가수: 제이심포니, 엘클래스, 박지<br>
+            프로듀싱: 짝짝쿵짝 - 가수 정동원과 남승민 듀엣곡, 읽씹 안읽씹-가수 장민호 솔로곡<br>
+            작사 작곡 : 가지 말라고(엘클래스-작사작곡 영탁), 니가 왜 거기서 나와 (작사작곡편곡-구희상, 지광민, 영탁 공동)<br></p>
+        <h4 id="item-2">대표곡</h4>
+        <p>찐이야<br>
+            니가 왜 거기서 나와(whit 고은아)<br></p>
+        <h4 id="item-3">수상</h4>
+        <p>《제 1회 영남가요제》 대상<br>
+            《전국노래자랑》<br>
+            《내일은 미스터트롯》최종 2위善(선)<br>
+            2020년 브랜드 고객충성도 1위 -영탁 트로트 남자 가수부분 대상 수상<br>
+            2020년 방송광고 페스티벌 CF 스타 신인상 수상<br></p>
+        <h5 id="item-3-1">방송</h5>
+        <p>2009년 SBS 《스타킹》 (지방 아이들소울)<br>
+            2012년 KBS2 《유희열의 스케치북》 (J-심포니)<br>
+            2012년 MBC 《쇼 챔피언》 (J-심포니)<br>
+            2013년 JTBC 《히든싱어 2》<br>
+            2019년 KBS1 《전국노래자랑》<br>
+            2019년 MBC 에브리원《대한외국인》 추석특집<br>
+            2020년 TV조선 《내일은 미스터트롯》<br>
+            2020년 MBC 《황금어장 라디오스타》<br>
+            2020년 JTBC 《아는 형님》 with 미스터트롯 top 6<br>
+            2020년 TV조선 《미스터트롯의 맛》<br>
+            2020년 TV조선 《TV조선 뉴스 9》<br>
+            2020년 TV조선 《신청곡을 불러드립니다 - 사랑의 콜센타》<br>
+            2020년 TV조선 《보도본부 핫라인》<br>
+            2020년 JTBC 《뭉쳐야찬다》<br>
+            2020년 MBC 《끼리끼리》<br>
+            2020년 MBC 《선을 넘는 녀석들》<br>
+            2020년 MBC 《쇼!음악중심》<br>
+            2020년 JTBC 《유랑마켓》<br>
+            2020년 JTBC 《77억의 사랑》 with 임영웅<br>
+            2020년 TV조선 《아내의 맛》<br>
+            2020년 TV조선 《뽕숭아학당》<br>
+            2020년 SBS 《미운 우리 새끼》<br>
+            2020년 MBC 수목드라마《꼰대인턴》 - 차형석 과장/본부장 역 (특별출연)<br>
+            2020년 KBS2 《불후의 명곡 전설을 노래하다》[전설 - 송해 편]<br>
+            2020년 SBS《SBS 인기가요》<br>
+            2020년 MBC 에브리원《대한외국인》 24대 우승자 with 김희재,정동원<br>
+            2020년 TV조선 《바람과 구름과 비》 (특별출연)<br>
+            2020년 tvN 《놀라운 토요일》 놀라운 토요일 도레미 마켓 with 장민호<br>
+            2020년 MBC 에브리원 <어서와 한국은 처음이지><br>
+                2020년 JTBC <히든싱어6><br></p>
+        <h5 id="item-3-2">광고</h5>
+        <p>2019년 JH글로벌 천하장사 원기천 홍삼정골드<br>
+            2020년 한국 야쿠르트 발효홍삼 발휘<br>
+            2020년 예천양조 영탁막걸리<br>
+            2020년 빙그레 아이스크림 슈퍼콘<br>
+            2020년 (주)신영 GS건설 울산 지웰시티 자이 (아파트)<br>
+            2020년 NAOBIO 비오틴구미 (비타민)<br>
+            2020년 광동제약-광동 헛개차 (숙취음료 건강음료 / 짜먹는 식)<br>
+            2020년 밀키트 전문 업체 마이쉐프 (간편식)<br>
+            2020년 뷰티 브랜드 JM SOLUTION (화장품)<br>
+            2020년 (주)피죤 (섬유유연제 세제 액츠)<br>
+            2020년 미스터피자 Mr. Pizza (미스터트리오 피자) with 장민호,이찬원<br>
+            2020년 치킨 프랜차이즈 기업 멕시카나 (치킨)<br>
+            2020년 게임 기적의 검<br>
+            2020년 해양수산부<br></p>
+    </div>
+</section>
+{% endblock %}
